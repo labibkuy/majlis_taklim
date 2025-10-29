@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Majlis Taklim Al-Hikmah</title>
+  <link rel="stylesheet" href="../public/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Fullscreen video background */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Overlay untuk meningkatkan keterbacaan teks */
+    .section-overlay {
+      background: rgba(15, 23, 42, 0.65); /* bg-slate-900 dengan opacity */
+      backdrop-filter: blur(2px);
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      .section-overlay {
+        padding: 1.5rem;
+        margin: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-white overflow-x-hidden">
+
+  <!-- Background Video -->
+  <video autoplay muted loop class="video-bg">
+    <source src="../public/assets/bg-nature1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 py-4 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-bold text-white drop-shadow">Al-Hikmah</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="text-white hover:text-primary font-medium drop-shadow">Beranda</a>
+        <a href="#tentang" class="text-white hover:text-primary font-medium drop-shadow">Tentang</a>
+        <a href="#visi" class="text-white hover:text-primary font-medium drop-shadow">Visi & Misi</a>
+        <a href="#galeri" class="text-white hover:text-primary font-medium drop-shadow">Galeri</a>
+        <a href="#ustadz" class="text-white hover:text-primary font-medium drop-shadow">Ustadz</a>
+        <a href="#sponsor" class="text-white hover:text-primary font-medium drop-shadow">Sponsor</a>
+      </div>
+      <button id="hamburger" class="md:hidden text-white text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 bg-slate-900/80 backdrop-blur-sm rounded-lg mx-4 py-2">
+      <a href="#home" class="block px-4 py-2 hover:text-primary">Beranda</a>
+      <a href="#tentang" class="block px-4 py-2 hover:text-primary">Tentang</a>
+      <a href="#visi" class="block px-4 py-2 hover:text-primary">Visi & Misi</a>
+      <a href="#galeri" class="block px-4 py-2 hover:text-primary">Galeri</a>
+      <a href="#ustadz" class="block px-4 py-2 hover:text-primary">Ustadz</a>
+      <a href="#sponsor" class="block px-4 py-2 hover:text-primary">Sponsor</a>
+    </div>
+  </nav>
+
+  <!-- Section 1: Home -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-16">
+    <div class="text-center animate-fadeIn max-w-3xl">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Majlis Taklim Al-Hikmah</h1>
+      <p class="text-xl md:text-2xl mb-8 drop-shadow-md">Menyinari Hati dengan Ilmu dan Keimanan</p>
+      <a href="#tentang" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition shadow-lg">
+        Pelajari Lebih Lanjut
+      </a>
+    </div>
+  </section>
+
+  <!-- Section 2: Tentang -->
+  <section id="tentang" class="py-20 px-4">
+    <div class="flex justify-center">
+      <div class="section-overlay text-center">
+        <h2 class="text-3xl font-bold mb-6 text-white">Tentang Kami</h2>
+        <p class="text-lg leading-relaxed">
+          Majlis Taklim Al-Hikmah adalah wadah pembelajaran agama Islam yang bertujuan untuk meningkatkan pemahaman dan pengamalan ajaran Islam secara menyeluruh. Didirikan sejak tahun 2015, kami rutin mengadakan kajian mingguan, kelas tahsin, dan program sosial untuk masyarakat sekitar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Visi & Misi -->
+  <section id="visi" class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10 animate-fadeIn">Visi & Misi</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="section-overlay">
+          <h3 class="text-xl font-bold text-primary mb-3">Visi</h3>
+          <p>Menjadi majlis taklim unggulan yang mencetak generasi muslim yang berakhlak mulia, berilmu, dan bermanfaat bagi umat.</p>
+        </div>
+        <div class="section-overlay">
+          <h3 class="text-xl font-bold text-secondary mb-3">Misi</h3>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Mengadakan kajian ilmu agama secara rutin</li>
+            <li>Menyebarkan nilai akhlakul karimah</li>
+            <li>Memberdayakan umat melalui program sosial</li>
+            <li>Menjalin ukhuwah islamiyah yang kuat</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Galeri -->
+  <section id="galeri" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10 animate-fadeIn">Dokumentasi Kegiatan</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="aspect-square bg-black/40 rounded-lg flex items-center justify-center text-white backdrop-blur-sm">Foto 1</div>
+        <div class="aspect-square bg-black/40 rounded-lg flex items-center justify-center text-white backdrop-blur-sm">Foto 2</div>
+        <div class="aspect-square bg-black/40 rounded-lg flex items-center justify-center text-white backdrop-blur-sm">Foto 3</div>
+        <div class="aspect-square bg-black/40 rounded-lg flex items-center justify-center text-white backdrop-blur-sm">Foto 4</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Ustadz -->
+  <section id="ustadz" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10 animate-fadeIn">Pembimbing Kami</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="section-overlay text-center">
+          <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-bold">Ustadz Ahmad Fauzi</h3>
+          <p class="text-gray-300 mb-3">Pengajar Tafsir & Hadis</p>
+          <button onclick="openModal('Ahmad Fauzi', 'Lulusan Al-Azhar...')" class="text-primary hover:underline">Lihat Biodata</button>
+        </div>
+        <!-- Tambahkan 2 lainnya seperti di atas -->
+        <div class="section-overlay text-center">
+          <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-bold">Ustadzah Siti Aminah</h3>
+          <p class="text-gray-300 mb-3">Pengajar Akhlak</p>
+          <button onclick="openModal('Siti Aminah', 'Pendidik perempuan...')" class="text-primary hover:underline">Lihat Biodata</button>
+        </div>
+        <div class="section-overlay text-center">
+          <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+          <h3 class="text-xl font-bold">Ustadz Rizal Malik</h3>
+          <p class="text-gray-300 mb-3">Pengajar Fiqih</p>
+          <button onclick="openModal('Rizal Malik', 'Aktivis dakwah muda...')" class="text-primary hover:underline">Lihat Biodata</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Sponsor -->
+  <section id="sponsor" class="py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8 animate-fadeIn">Terima Kasih kepada Sponsor Kami</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="section-overlay px-6 py-3">Yayasan Nurul Ilmi</div>
+        <div class="section-overlay px-6 py-3">Masjid Al-Furqon</div>
+        <div class="section-overlay px-6 py-3">Koperasi Muslimin</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Footer -->
+  <footer id="footer" class="py-12 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Majlis Taklim Al-Hikmah</h3>
+      <p>Jl. Ilmu No. 123, Kota Iman, Indonesia</p>
+      <p>📞 (021) 1234-5678 | ✉️ info@alhikmah.id</p>
+      <p class="mt-6 text-slate-300">© 2025. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Biodata -->
+  <div id="bioModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm">
+    <div class="flex items-center justify-center min-h-screen px-4">
+      <div class="bg-slate-900 text-white rounded-xl max-w-lg w-full p-6 animate-fadeIn">
+        <div class="flex justify-between items-start mb-4">
+          <h3 id="modalName" class="text-2xl font-bold"></h3>
+          <button onclick="closeModal()" class="text-gray-400 hover:text-white text-xl">&times;</button>
+        </div>
+        <p id="modalBio" class="text-gray-300"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
